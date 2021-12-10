@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="hole_position_x" default="2.0" />
+    <arg name="hole_position_y" default="0.0" />
+    <arg name="hole_position_z" default="1.5" />
+    <arg name="hole_orientation_x" default="-0.157" />
+    <arg name="hole_orientation_y" default="-0.169" />
+    <arg name="hole_orientation_z" default="0.973" />
+    <arg name="hole_orientation_w" default="0.027" />
+    <arg name="hole_dimensions_x" default="0.05" />
+    <arg name="hole_dimensions_y" default="1.0" />
+    <arg name="hole_dimensions_z" default="1.0" />
+    <arg name="entry_distance" default="0.5" />
+    <arg name="flying_into_hole_detection_distance" default="0.3" />
+    <arg name="fix_hole" default="false" />
+    <arg name="flying_into_hole_pass_distance" default="0.3" />
+    <arg name="flying_into_hole_detection_pass_distance" default="0.3" />
+
+    <node pkg="task_manager" type="test_flew_into_hole_detection" name="test_flew_into_hole_detection" output="screen">
+        <param name="hole_position_x" value="$(arg hole_position_x)" />
+        <param name="hole_position_y" value="$(arg hole_position_y)" />
+        <param name="hole_position_z" value="$(arg hole_position_z)" />
+        <param name="hole_orientation_x" value="$(arg hole_orientation_x)" />
+        <param name="hole_orientation_y" value="$(arg hole_orientation_y)" />
+        <param name="hole_orientation_z" value="$(arg hole_orientation_z)" />
+        <param name="hole_orientation_w" value="$(arg hole_orientation_w)" />
+        <param name="hole_dimensions_x" value="$(arg hole_dimensions_x)" />
+        <param name="hole_dimensions_y" value="$(arg hole_dimensions_y)" />
+        <param name="hole_dimensions_z" value="$(arg hole_dimensions_z)" />
+        <param name="entry_distance" value="$(arg entry_distance)" />
+        <param name="flying_into_hole_detection_distance" value="$(arg flying_into_hole_detection_distance)" />
+        <param name="fix_hole" value="$(arg fix_hole)" />
+        <param name="flying_into_hole_pass_distance" value="$(arg flying_into_hole_pass_distance)" />
+        <param name="flying_into_hole_detection_pass_distance" value="$(arg flying_into_hole_detection_pass_distance)" />
+    </node>
+</launch>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="altitude" default="1.7" />
+    <arg name="angular_velocity" default="0.2" />
+    <arg name="flying_into_hole_pass_distance" default="0.5" />
+    <arg name="flying_into_hole_detection_pass_distance" default="0.3" />
+
+    <node pkg="task_manager" type="test_fly_into_hole" name="test_fly_into_hole" output="screen">
+        <param name="altitude" value="$(arg altitude)" />
+        <param name="angular_velocity" value="$(arg angular_velocity)" />
+        <param name="flying_into_hole_pass_distance" value="$(arg flying_into_hole_pass_distance)" />
+        <param name="flying_into_hole_detection_pass_distance" value="$(arg flying_into_hole_detection_pass_distance)" />
+    </node>
+</launch>

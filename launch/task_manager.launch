@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="operating_altitude" default="0.8" />
+    <arg name="low_altitude" default="0.5" />
+    <arg name="linear_velocity" default="0.2" />
+    <arg name="linear_acceleration" default="0.2" />
+    <arg name="angular_velocity" default="0.2" />
+    <arg name="angular_acceleration" default="0.2" />
+    <arg name="flying_into_hole_detection_distance" default="0.3" />
+    <arg name="flying_into_hole_pass_distance" default="0.5" />
+    <arg name="flying_into_hole_detection_pass_distance" default="0.3" />
+    <arg name="min_battery_voltage" default="10.0" />
+
+    <arg name="task1_cubes_count" default="5" />
+    <arg name="task1_max_timer_minutes" default="7.0" />
+
+    <arg name="task2_max_floor_z" default="0.2" />
+    <arg name="task2_max_qr_distance_tolerance" default="0.2" />
+    <arg name="task2_max_association_distance" default="0.6" />
+
+    <node pkg="task_manager" type="task_manager" name="task_manager" output="screen">
+        <param name="operating_altitude" value="$(arg operating_altitude)" />
+        <param name="low_altitude" value="$(arg low_altitude)" />
+        <param name="linear_velocity" value="$(arg linear_velocity)" />
+        <param name="linear_acceleration" value="$(arg linear_acceleration)" />
+        <param name="angular_velocity" value="$(arg angular_velocity)" />
+        <param name="angular_acceleration" value="$(arg angular_acceleration)" />
+        <param name="flying_into_hole_detection_distance" value="$(arg flying_into_hole_detection_distance)" />
+        <param name="min_battery_voltage" value="$(arg min_battery_voltage)" />
+        <param name="flying_into_hole_pass_distance" value="$(arg flying_into_hole_pass_distance)" />
+        <param name="flying_into_hole_detection_pass_distance" value="$(arg flying_into_hole_detection_pass_distance)" />
+        <param name="task1_cubes_count" value="$(arg task1_cubes_count)" />
+        <param name="task1_max_timer_minutes" value="$(arg task1_max_timer_minutes)" />
+        <param name="task2_max_floor_z" value="$(arg task2_max_floor_z)" />
+        <param name="task2_max_qr_distance_tolerance" value="$(arg task2_max_qr_distance_tolerance)" />
+        <param name="task2_max_association_distance" value="$(arg task2_max_association_distance)" />
+    </node>
+</launch>

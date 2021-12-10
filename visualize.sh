@@ -1,0 +1,1 @@
+dot -Tpng target/machine/dronestate.dot > machine.png
